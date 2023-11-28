@@ -1,0 +1,336 @@
+.bundle-offer-product-tag {
+    display: inline-block!important
+}
+
+.cart-discount-rule-wrapper {
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 10px
+}
+
+.cart-discount-rule-wrapper .message {
+    color: var(--primary-color)
+}
+
+.discount-progress-linear {
+    background: rgba(var(--bs-light-rgb))!important;
+    overflow: hidden;
+    width: 100%
+}
+
+.js-free-shipping-rule-progress {
+    transition: .3s
+}
+
+.js-free-shipping-rule-section {
+    max-width: 100%
+}
+
+.carousel .overlay {
+    position: absolute!important;
+    width: 100%!important;
+    height: 100%!important;
+    z-index: 2!important;
+    background-color: rgba(0,0,0,.3)!important;
+    opacity: .7!important
+}
+
+.noUi-tooltip {
+    padding: 0!important;
+    border: none!important
+}
+
+.noUi-tooltip {
+    background: inherit!important
+}
+
+#js-microphone-icon:hover {
+    transform: scale(1.2);
+    opacity: .8;
+    transition: transform .3s ease,opacity .3s ease
+}
+
+.card.transform-on-hover {
+    transition: all .3s ease-in-out
+}
+
+.card.transform-on-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px rgba(0,0,0,.15)
+}
+
+.css-payment-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down
+}
+
+.css-animated-gift {
+    animation: growAnimation 6s ease-in-out infinite
+}
+
+@keyframes growAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.css-envelope {
+    position: relative;
+    overflow: hidden
+}
+
+@keyframes envelopeFlapAnimation {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.css-envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg,#ff758c,#ff7eb3,#a445b2,#7866d6,#81c2f7,#74ebd5);
+    background-size: 300% 300%;
+    animation: envelopeFlapAnimation 15s ease-in-out infinite
+}
+
+.css-envelope-image {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover
+}
+
+.css-btn-shine {
+    position: relative;
+    overflow: hidden
+}
+
+.css-btn-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent)
+}
+
+.css-btn-shine::before {
+    left: -100%;
+    transition: all .65s ease-in-out
+}
+
+.css-btn-shine::before {
+    animation: shine 5s ease-in-out infinite
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+        animation-timing-function: left
+    }
+
+    11.5044247788%,100% {
+        left: 100%;
+        animation-timing-function: left
+    }
+}
+
+.css-inverse-btn-shine {
+    position: relative;
+    overflow: hidden
+}
+
+.css-inverse-btn-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,transparent,rgba(51,51,51,0.1),transparent)
+}
+
+.css-inverse-btn-shine::before {
+    right: -100%;
+    transition: all .65s ease-in-out
+}
+
+.css-inverse-btn-shine::before {
+    animation: css-inverse-shine 5s ease-in-out infinite reverse
+}
+
+@keyframes css-inverse-shine {
+    0% {
+        right: -100%;
+        animation-timing-function: right
+    }
+
+    11.5044247788%,100% {
+        right: 100%;
+        animation-timing-function: right
+    }
+}
+
+.js-card-preview img.emoji {
+    max-height: 1em;
+    max-width: 1em
+}
+
+@media(max-width: 575.98px) {
+    .w-50.js-card-preview {
+        width:initial!important
+    }
+}
+
+.css-typing-effect span {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0;
+    animation: typing 1s steps(20,end),blink-caret .75s step-end infinite
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from,to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary-color)
+    }
+}
+
+.css-logo {
+    object-fit: contain;
+    height: 100%;
+    mix-blend-mode: multiply
+}
+
+.css-navbar-brand {
+    height: 50px!important;
+    width: auto!important
+}
+
+.loyalty-points-products-section {
+    font-size: inherit!important;
+    border: none!important;
+    margin-top: inherit!important;
+    border-radius: inherit!important;
+    padding: inherit!important;
+    color: inherit!important
+}
+
+.loyalty-points-products-section .loyalty-points-rewards-logo>path:first-child,.loyalty-points-products-section .loyalty-points-rewards-logo>path:nth-child(3),.loyalty-points-products-section .loyalty-points-rewards-logo>path:nth-child(4) {
+    fill: var(--color-primary)!important
+}
+
+.loyalty-points-products-section.rtl .loyalty-points-rewards {
+    margin-right: auto!important
+}
+
+.loyalty-points-rewards-logo {
+    width: 30px!important;
+    height: 30px!important
+}
+
+[dir=ltr] .loyalty-points-rewards-logo {
+    transform: scale(-1,1)!important
+}
+
+.loyalty-rewards-popup .loyalty-rewards-popup__learn-button {
+    display: inherit!important
+}
+
+.loyalty-rewards-popup__inner {
+    text-align: inherit!important
+}
+
+.loyalty-rewards-popup__rewards_row,.loyalty-points__info {
+}
+
+.loyalty-points-section .loyalty-points__points-text {
+    color: var(--color-primary)!important;
+    margin: inherit!important
+}
+
+.loyalty-rewards-popup__cta {
+    margin-top: 1rem!important
+}
+
+.loyalty-points-section {
+    font-size: inherit!important;
+    border: 0!important;
+    margin-top: inherit!important;
+    border-radius: inherit!important;
+    padding: inherit!important
+}
+
+.loyalty-points-section .loyalty-points-method-applied-row button {
+    height: inherit!important;
+    min-width: inherit!important;
+    margin-left: inherit!important;
+    text-decoration: underline!important
+}
+
+.loyalty-points-section .loyalty-points-method-applied-row>span {
+    padding-top: inherit!important;
+    padding-bottom: inherit!important;
+    padding-left: inherit!important;
+    padding-right: inherit!important;
+    display: inherit!important;
+    width: inherit!important;
+    line-height: inherit!important
+}
+
+.loyalty-rewards-popup .loyalty-points__points-text {
+    color: var(--color-primary)!important;
+    font-weight: 600!important
+}
+
+.loyalty-rewards-popup__rewards_row {
+    font-size: .9rem!important
+}
+
+.payment-provider-icon img {
+    height: 15px
+}
+
+.loyalty_footer_btn {
+    color: var(--bs-btn-color)!important;
+    background-color: var(--color-primary)!important
+}
+
+.loyalty_button_footer .loyalty-points-rewards-list-logo.loyalty-points-rewards-popup-logo>path:first-child,.loyalty_button_footer .loyalty-points-rewards-list-logo.loyalty-points-rewards-popup-logo>path:nth-child(4),.loyalty_button_footer .loyalty-points-rewards-list-logo.loyalty-points-rewards-popup-logo>path:nth-child(3) {
+    fill: #fff!important
+}

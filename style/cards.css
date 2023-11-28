@@ -1,0 +1,377 @@
+/* -------------------------------------------------------------------------- */
+/*                        Daily_best_sellers_top_sellszzz                        */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                               Seller_section                               */
+/* -------------------------------------------------------------------------- */
+
+.Seller {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 30px;
+  margin: 10px 0px 200px 0px;
+}
+.Seller .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 30px;
+}
+.Pro_header {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 10px;
+  background-color: #154457;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 20px;
+  text-align: right;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+.Pro_header h2 {
+  font-family: 'Quicksand', sans-serif;    
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Cards_Creation                               */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 305px);
+  gap: 20px;
+}
+.Seller .box .cards .card {
+  display: block;
+  border: 2px solid #154457;
+  background-color: transparent;    
+  padding: 15px;
+  box-shadow: inset 0px 0px 0.5em 0px rgb(9, 35, 70),
+  0px 0px 0.5em 0px rgb(9, 35, 70);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Card_Content                                */
+/* -------------------------------------------------------------------------- */
+
+.Seller .box .cards .card .first_section .Product-image img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.Seller .box .cards .card .first_section span {
+  font-size: 15px;
+  color: rgb(131, 131, 131);
+}
+.Seller .box .cards .card .first_section h4 {   
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+#Imagee {
+  object-fit: cover;
+  width: 100%;
+  max-height: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Price_section                               */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards .card .Price_block  {
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+
+}  
+.Seller .box .cards .card .Price_block .price {
+  color: #1fcc7b;
+  font-size: 1.4rem;
+  margin-right: 20px;
+}
+.Seller .box .cards .card .Price_block span:last-child {
+  color: grey;   
+  text-decoration: line-through;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Cards_button                                */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards .card .div_btn {
+  width: 270px;
+  height: 47px;
+  background-color: #154457;
+  font-size: 1rem;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.Seller .box .cards .card .div_btn button {
+  background: transparent;
+  width: 116px;
+  height: 20px;
+  border: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.Seller .box .cards .card .div_btn button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Scaling_button_content                           */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards .card .div_btn:hover * {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                               margin_for_divs                              */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards .card:last-child form div {
+  margin: 10px 0;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Daily_best_sellers                             */
+/* -------------------------------------------------------------------------- */
+
+.top_sellers {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  /* gap: 50px; */
+  padding: 80px 60px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Heading                                  */
+/* -------------------------------------------------------------------------- */
+.top_sellers .sells h2 {
+  padding: 20px 0;
+  text-shadow: 0 0 25px #2b19d1, 0 0 50px #2802ff;
+  position: relative;
+}
+
+.top_sellers .sells h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 110px;
+  height: 3.6px;
+  background-color: #1fcc7b;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        the_image_product_and_content                       */
+/* -------------------------------------------------------------------------- */
+.top_sellers .sells .product  {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px 0;
+  gap: 30px;
+}
+.top_sellers .sells .product > img  {
+  background-color: #F2F3F7;
+}
+
+.top_sellers .sells .product .cont .stars {
+  margin: 5px 0 20px 0;
+
+}
+.top_sellers .sells .product .cont .price span:nth-child(1) {
+  color: #159e5e;
+  font-size: 1.3rem;
+}
+.top_sellers .sells .product .cont .price span:nth-child(2) {
+  color: #838383;
+  text-decoration: line-through;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Media_query                                */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 390px) and (max-width: 940px) {
+  
+  .Seller .box .cards{
+    overflow-x: auto;
+      /* display: flex; */
+      /* flex-wrap: wrap; */
+  }
+
+  .top_sellers {
+    position: relative;
+    right: -200px;
+  }
+  .Seller .box {
+    margin: 0px;
+    overflow: scroll;
+  }
+  .Seller .box::-webkit-scrollbar {
+    width: 0;
+  }
+  /* .Pro_header {
+    position: fixed;
+  } */
+
+  .Categories .Products .cards {
+    position: relative;
+    right: -200px;
+  }
+}
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Cards_Creation                               */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards_2 {
+  display: grid;
+  grid-template-columns: repeat(4, 305px);
+  gap: 20px;
+}
+.Seller .box .cards_2 .card {
+  display: block;
+  border: 2px solid #154457;
+  background-color: transparent;    
+  padding: 15px;
+  box-shadow: inset 0px 0px 0.5em 0px rgb(9, 35, 70),
+  0px 0px 0.5em 0px rgb(9, 35, 70);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Card_Content                                */
+/* -------------------------------------------------------------------------- */
+
+.Seller .box .cards_2 .card .first_section .Product-image img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.Seller .box .cards_2 .card .first_section span {
+  font-size: 15px;
+  color: rgb(131, 131, 131);
+}
+.Seller .box .cards_2 .card .first_section h4 {   
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+#Imagee {
+  object-fit: cover;
+  width: 100%;
+  max-height: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Price_section                               */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards_2 .card .Price_block  {
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+
+}  
+.Seller .box .cards_2 .card .Price_block .price {
+  color: #1fcc7b;
+  font-size: 1.4rem;
+  margin-right: 20px;
+}
+.Seller .box .cards_2 .card .Price_block span:last-child {
+  color: grey;   
+  text-decoration: line-through;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Cards_button                                */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards_2 .card .div_btn {
+  width: 270px;
+  height: 47px;
+  background-color: #154457;
+  font-size: 1rem;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.Seller .box .cards_2 .card .div_btn button {
+  background: transparent;
+  width: 116px;
+  height: 20px;
+  border: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.Seller .box .cards_2 .card .div_btn button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Scaling_button_content                           */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards_2 .card .div_btn:hover * {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                               margin_for_divs                              */
+/* -------------------------------------------------------------------------- */
+.Seller .box .cards_2 .card:last-child form div {
+  margin: 10px 0;
+}
+

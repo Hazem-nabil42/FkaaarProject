@@ -1,0 +1,26 @@
+[
+    {
+        "id": 4,
+        "image": "./assets/logopng.PNG",
+        "title": "product1",
+        "price": 10 
+    },
+    {
+        "id": 5,
+        "image": "./assets/logopng.PNG",
+        "title": "product2",
+        "price": 20
+    },
+    {
+        "id": 6,
+        "image": "./assets/logopng.PNG",
+        "title": "product3",
+        "price": 30
+    },
+    {
+        "id": 7,
+        "image": "./assets/logopng.PNG",
+        "title": "product4",
+        "price": 100
+    }
+    ]

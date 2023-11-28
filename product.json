@@ -1,0 +1,26 @@
+[
+{
+    "id": 0,
+    "image": "./assets/logopng.PNG",
+    "title": "vegetables",
+    "price": 120 
+},
+{
+    "id": 1,
+    "image": "./assets/logopng.PNG",
+    "title": "drinks",
+    "price": 150
+},
+{
+    "id": 2,
+    "image": "./assets/logopng.PNG",
+    "title": "fruits",
+    "price": 130
+},
+{
+    "id": 3,
+    "image": "./assets/logopng.PNG",
+    "title": "food",
+    "price": 140
+}
+]

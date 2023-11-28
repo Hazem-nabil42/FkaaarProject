@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style/Form.css">
+	<!-- <link rel="stylesheet" href="./style/Table.css"> -->
+
+	<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+  (function(){
+	emailjs.init("tYhyR8qvTV9OpUJr5");
+  })();
+</script>
+
+</head>
+<body>
+	<!-- <img class="hint" src="./assets/logopng.png"> -->
+
+    <div class="T-app" >
+        <div style="  height: 75px; background: #0064af;">
+        </div>
+        <div style="margin: 20px;">
+          <div class="T-app-table">
+            <table style="width: 100%; border-spacing: 0px;">
+              <thead style="  border-bottom: 4px solid #cccccc; color: #333333; text-align: left;">
+                <tr style="height: 25px;">
+                  <th colspan='3' style="padding: 10px;">
+                    <span>المنتجات</span>
+                    <div class="toggle">
+
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="t-body">
+                <!-- <tr style="  height: 70px; margin: 20px 0px; opacity: 1;" >
+                  <td style="padding: 10px;"><div>120$</div></td>
+                  <td style="padding: 10px;"><img width="60" height="60" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt=""></td>
+                  <td style="padding: 10px;">1 qunatitiy</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+	<div class="container">
+		<div class="bar">
+			<span class="bar-circle active"></span>
+			<span class="bar-circle"></span>
+			<span class="bar-circle"></span>
+			<span class="bar-circle"></span>
+		</div>
+	
+		<div class="form-container">
+			<form action="">
+	
+				<div class="form-page">
+					<label>الاسم</label>
+					<input type="text" id="name" required> <hr>
+					<label>الايميل</label>
+					<input type="text" id="email" required> <hr>
+					<button class="btn"> Next </button>                    
+				</div>
+	
+				<div class="form-page">
+					<label>المنطقة</label>
+					<input type="text" required id="place">  <hr>     
+					<label>قطعة</label>
+					<input type="text" required id="piece">   <hr>
+					<label>شارع</label>
+					<input type="text" required id="street">   <hr>
+					<label>منزل</label>
+					<input type="text" required id="home">       <hr>
+					<button class="btn" data-nav="next"> Next </button>       
+					<button class="btn" data-nav="prev"> Prev </button>   
+	
+				</div>
+	
+				<div class="form-page">
+					<label>اختيار الدفع</label>
+					<input type="text" required placeholder="Online or cash" id="pay-meth">
+					<hr>    
+					<label> Whatsapp </label>
+					<input type="tel" required id="Whatsapp">      <hr>  
+					<button class="btn" data-nav="next"> Next </button>   
+					<button class="btn" data-nav="prev"> Prev </button>              
+				</div>
+	
+				<div class="form-page">
+					<label>نوع التوصيل</label>
+					<input type="text" required placeholder="عادي | سريع" id="type-deliver">     <hr>     
+					<button class="btn" id="submit-btn"> Complete </button>    
+					<button class="btn" data-nav="prev"> Prev </button>
+					<em >التوصيل العادي خلال 24 ساعه : 2دينار <br> <br> التوصيل السريع خلال ساعه: 3دينار</em>
+				</div>
+				
+				<div class="form-page">
+					<p class="final-message">Your order has been deliver we will contact with your Whatsapp as soon as possible ! thank you :) </p>				
+				</div>
+	
+			</form>
+		</div>
+	
+	</div>
+
+	<script>
+		const buttons = document.querySelectorAll('.btn')
+const formPages = document.querySelectorAll('.form-page')
+const bars = document.querySelectorAll('.bar-circle')   
+
+let pageStates = {
+    oldPageNum: null,
+    currentPage: null,
+}
+
+const pageTransform = () => {
+    formPages.forEach(page => {        
+        page.style.transform = `translateX(-${(pageStates.currentPage) * 100}%)`
+    })
+}
+
+const handleClasses = () => {     
+
+    bars.forEach(bar => {
+        bar.classList.remove('active')
+    })
+
+    if(bars[pageStates.currentPage]) {
+        for(let i = 0; i < pageStates.currentPage + 1; i++) {
+            bars[i].classList.add('active')
+        }
+    } else {
+        bars.forEach(bar => {
+            bar.classList.add('active')
+            bar.classList.add('done')
+        })
+    }
+}
+
+const indexFinder = (el) => {    
+    let i = 0;
+    for(; el = el.previousElementSibling; i++);
+    return i;
+}
+
+const pageHandler = (e) => {
+    e.preventDefault()
+
+    const navData = e.currentTarget.getAttribute('data-nav')
+    pageStates.oldPageNum = indexFinder(e.currentTarget.parentElement)
+    
+    if(navData == "prev") {
+        pageStates.currentPage = pageStates.oldPageNum - 1
+    } else {
+        pageStates.currentPage = pageStates.oldPageNum + 1
+    }    
+
+    pageTransform()
+    handleClasses()
+}
+
+
+const barHandler = (e) => {
+    e.preventDefault()
+    pageStates.currentPage = indexFinder(e.currentTarget)
+
+    pageTransform()
+    handleClasses()
+}
+
+buttons.forEach(button => {
+    button.addEventListener('click', pageHandler)
+})
+
+bars.forEach(bar => {
+    bar.addEventListener('click', barHandler)
+})
+	</script>
+
+	<script src="./Front-End/JS/Form.js"></script>
+
+</body>
+</html>
